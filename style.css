@@ -1,0 +1,42 @@
+*{box-sizing:border-box}
+html,body{margin:0;background:#0b0c0f;color:#eee;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-tap-highlight-color:transparent}
+header{display:flex;justify-content:space-between;align-items:center;padding:12px 24px;gap:12px;flex-wrap:wrap}
+.time{display:flex;align-items:baseline;gap:16px}
+#clock{font-size:44px;font-weight:700;line-height:1}
+#date{font-size:18px;color:#9aa}
+#date::first-letter{text-transform:uppercase}
+.actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+button,.toggle{min-height:56px;padding:0 20px;font-size:18px;border-radius:14px;border:1px solid #333;background:#1b1d23;color:#eee;cursor:pointer;display:flex;align-items:center;gap:10px;font-family:inherit}
+button.primary{background:#2563eb;border-color:#2563eb}
+.toggle input{width:26px;height:26px}
+.banner{margin:0 24px 10px;padding:8px 14px;border-radius:12px;background:#3a2c08;color:#ffd77a;font-size:16px}
+nav{display:flex;gap:8px;padding:0 24px 12px;overflow-x:auto}
+nav button{min-height:56px;white-space:nowrap;font-size:19px}
+nav button.on{background:#eee;color:#111;border-color:#eee}
+main{padding:0 24px 24px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.tiles.big{grid-template-columns:repeat(4,1fr)}
+.tiles.big .tile{min-height:150px;font-size:24px}
+.tiles.big .tile .ic{font-size:60px}
+.tile{position:relative;min-height:130px;border-radius:20px;background:var(--c,#222);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#fff;text-decoration:none;font-size:19px;font-weight:600;box-shadow:0 4px 16px #0006;transition:transform .1s;text-align:center}
+.tile:active{transform:scale(.95)}
+.tile .ic{font-size:48px;line-height:1}
+.join{display:flex;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.join input{flex:1;min-width:260px;min-height:72px;font-size:26px;padding:0 18px;border-radius:16px;border:2px solid #2563eb;background:#11131a;color:#fff}
+.join button{min-height:72px;font-size:24px;padding:0 32px}
+.recent{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.recent button{min-height:48px;font-size:16px;max-width:320px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block}
+.sub{color:#889;font-size:15px;margin:0 0 8px}
+.edit .tile{outline:2px dashed #fff5}
+.tools{display:none;position:absolute;inset:auto 6px 6px 6px;gap:4px;justify-content:center}
+.edit .tools{display:flex}
+.tools button{min-height:40px;padding:0 10px;font-size:18px;border-radius:10px;background:#000a}
+.editbar{display:none;gap:12px;margin-top:18px}
+.edit .editbar{display:flex}
+dialog{background:#1b1d23;color:#eee;border:1px solid #333;border-radius:20px;padding:28px;width:min(520px,92vw)}
+dialog::backdrop{background:#000b}
+dialog label{display:block;margin:12px 0;font-size:18px}
+dialog input{display:block;width:100%;margin-top:6px;min-height:52px;font-size:20px;background:#0b0c0f;color:#eee;border:1px solid #444;border-radius:12px;padding:0 12px}
+.row{display:flex;gap:12px;justify-content:flex-end;margin-top:20px}
+@media (min-width:1700px){#clock{font-size:60px}.tiles.big .tile{min-height:200px}.tile{min-height:160px}}
+@media (max-width:900px){header,main,nav{padding-left:12px;padding-right:12px}.banner{margin:0 12px 10px}.tiles.big{grid-template-columns:repeat(2,1fr)}.tiles{grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}.tile{min-height:110px}}

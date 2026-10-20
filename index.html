@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Painel Tesla</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="time"><span id="clock">--:--</span><span id="date"></span></div>
+  <div class="actions">
+    <label class="toggle" title="Abre links via youtube.com/redirect (truque de ecrã inteiro no Tesla)">
+      <input type="checkbox" id="fsMode"><span>Modo ecrã inteiro Tesla</span>
+    </label>
+    <button id="fsBtn">⛶ Ecrã inteiro</button>
+    <button id="editBtn">✎ Editar</button>
+  </div>
+</header>
+<div class="banner">🅿️ Videochamadas só com o carro em <b>Park</b>. Em condução, use voz pelo telemóvel via Bluetooth.</div>
+<nav id="tabs"></nav>
+<main id="grid"></main>
+<dialog id="dlg">
+  <form method="dialog" id="form">
+    <h2 id="dlgTitle">Ligação</h2>
+    <label>Nome<input name="name" required></label>
+    <label>URL<input name="url" type="url" required></label>
+    <label>Ícone (emoji)<input name="icon" maxlength="4"></label>
+    <label>Categoria<input name="cat" list="cats" required><datalist id="cats"></datalist></label>
+    <label>Cor<input name="color" type="color" value="#333333"></label>
+    <div class="row"><button value="cancel" formnovalidate>Cancelar</button><button value="ok" class="primary">Guardar</button></div>
+  </form>
+</dialog>
+<script src="script.js"></script>
+</body>
+</html>
